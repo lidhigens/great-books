@@ -1,24 +1,23 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Passport — Google OAuth 2.0 Example</title>
-	</head>
-	<body>
-		{{#if user}}
-			<p>
-			<a href="/">Home</a> | 
-			<a href="/account">Account</a> | 
-			<a href="/logout">Log Out</a>
-			</p>
-		{{else}}
-			<p>
-			<a href="/">Home</a> | 
-			<a href="/login">Log In</a>
-			</p>
-		{{/if}}
+<html lang="en">
 
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="/style.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<header>
+		<h1><a href="/">{{sitename}}</a></h1>
+	</header>
+	<main>
 		{{{ body }}}
+	</main>
+	<footer>
+		<p><small><a href="{{source_url}}">View source code on GitHub</a></small></p>
+	</footer>
+</body>
 
-	</body>
 </html>
