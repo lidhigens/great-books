@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyparser = require('body-parser');
 
 // Create new express application
 var app = express();
@@ -15,6 +16,11 @@ app.use(function(req, res, next) {
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
+
+// Enable basic parsing of <form> post bodies
+app.use(bodyparser.urlencoded({
+  extended: false
+}));
 
 // Store site-wide information for templates
 app.locals.sitename = 'Express Boilerplate';
