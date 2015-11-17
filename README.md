@@ -1,18 +1,15 @@
-Express Boilerplate
-===================
+Great Books
+===========
 
-This is an Express 4 application to be used as a starting point for building 
-dynamic web applications using [Node.js](http://nodejs.org) and
-[Express](http://expressjs.com/).
+Great books is a curated list of the very best books in all the world. In this 
+exercise, we will explore a few features and capabilities of Mustache and
+Handlebars.
 
 ## Install
 
-1. `git clone https://github.com/unioncollege-webtech/express-boilerplate`
-2. `cd express-boilerplate && npm install`
+1. `git clone https://github.com/unioncollege-webtech/great-books`
+2. `cd great-books && npm install`
 3. `npm start`
-
-## Credits
-
 
 ## License
 

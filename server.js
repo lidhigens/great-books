@@ -23,8 +23,11 @@ app.use(bodyparser.urlencoded({
 }));
 
 // Store site-wide information for templates
-app.locals.sitename = 'Express Boilerplate';
-app.locals.source_url = 'https://github.com/unioncollege-webtech/express-boilerplate';
+app.locals.sitename = 'Great Books';
+app.locals.source_url = 'https://github.com/unioncollege-webtech/great-books';
+
+// Initialize the book database
+var booklist = [];
 
 
 //
@@ -34,10 +37,28 @@ app.locals.source_url = 'https://github.com/unioncollege-webtech/express-boilerp
 // Respond to the base path
 app.get('/', function(req, res) {
   res.render('index', {
-    title: 'Welcome!'
+    title: 'Welcome!',
+    books: booklist
   });
 });
 
+app.post('/', function(req, res) {
+
+  // Save the book if the user submitted something
+  var titleSubmitted = req.body && req.body.title && req.body.title.trim();
+  if(titleSubmitted) {
+    // TODO: Don't add duplicate titles
+    booklist.push({
+      title: req.body.title
+    });
+  }
+
+  res.render('index', {
+    title: 'Welcome',
+    message: 'Thank you for your submission!',
+    books: booklist
+  });
+});
 
 // Start the server
 var port = process.env.PORT || 3000;

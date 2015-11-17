@@ -1,9 +1,21 @@
+<!-- TODO 5: Create an <h1> with the page title here -->
 <p>
-	<a href="{{source_url}}">{{sitename}}</a> is an Express application to be 
-	used as a starting point for building dynamic web applications using 
-	<a href="https://nodejs.org">Node.js</a> and 
-	<a href="http://expressjs.com">Express</a>.
+	Welcome to <!-- TODO 6: Insert sitename here-->! Below you'll find a list of the greatest books in the whole world. Feel free to add your favorites to the list!
 </p>
-<p>
-	<img src="/images/code.png" alt="A picture of JavaScript source code.">
-</p>
+
+<section>
+	<h2>Great Books</h2>
+	
+    <!-- TODO 7: Show 'message' if it exists' -->
+
+	<form method="POST">
+		<label>Add a book
+			<input name="title" placeholder="Book title">
+		</label>
+		<button type="submit">Send!</button>
+	</form>
+
+	<ul>
+		<!-- TODO 8: Create an <li> with the title for each book -->
+	</ul>
+</section>
